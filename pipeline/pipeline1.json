@@ -91,16 +91,20 @@
 		],
 		"parameters": {
 			"pp_container": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "project1"
 			},
 			"pp_inputfolder": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "mirudir/input"
 			},
 			"pp_outputfolder": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "mirudir/output"
 			},
 			"pp_filename": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "SalesLTProduct.txt"
 			}
 		},
 		"folder": {
