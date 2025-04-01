@@ -1,0 +1,9 @@
+{
+	"name": "dfmiru",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "18a87857-c491-4cfc-a89d-334552ee7ac4",
+		"tenantId": "3793fdd9-b0b5-4bc4-824e-ee319a114454"
+	}
+}
