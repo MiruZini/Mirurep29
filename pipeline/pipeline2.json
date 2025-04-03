@@ -150,6 +150,10 @@
 			"pp_output": {
 				"type": "string",
 				"defaultValue": "mirudir/output"
+			},
+			"pp_filetype": {
+				"type": "string",
+				"defaultValue": "txt"
 			}
 		},
 		"annotations": []
