@@ -32,8 +32,38 @@
 						"type": "DelimitedTextReadSettings"
 					}
 				}
+			},
+			{
+				"name": "ForEach1",
+				"type": "ForEach",
+				"dependsOn": [
+					{
+						"activity": "Get Metadata1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"isSequential": true
+				}
 			}
 		],
+		"parameters": {
+			"pp_container": {
+				"type": "string",
+				"defaultValue": "project1"
+			},
+			"pp_input": {
+				"type": "string",
+				"defaultValue": "mirudir/input"
+			},
+			"pp_output": {
+				"type": "string",
+				"defaultValue": "mirudir/output"
+			}
+		},
 		"annotations": []
 	}
 }
