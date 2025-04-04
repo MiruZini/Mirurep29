@@ -15,20 +15,34 @@
 					"isSequential": true,
 					"activities": [
 						{
-							"name": "Set variable1",
-							"type": "SetVariable",
+							"name": "If Condition1",
+							"type": "IfCondition",
 							"dependsOn": [],
-							"policy": {
-								"secureOutput": false,
-								"secureInput": false
-							},
 							"userProperties": [],
 							"typeProperties": {
-								"variableName": "output",
-								"value": {
-									"value": "@item()",
+								"expression": {
+									"value": "@equals(item(),'apple')",
 									"type": "Expression"
-								}
+								},
+								"ifTrueActivities": [
+									{
+										"name": "Set variable1_copy1",
+										"type": "SetVariable",
+										"dependsOn": [],
+										"policy": {
+											"secureOutput": false,
+											"secureInput": false
+										},
+										"userProperties": [],
+										"typeProperties": {
+											"variableName": "output",
+											"value": {
+												"value": "@item()",
+												"type": "Expression"
+											}
+										}
+									}
+								]
 							}
 						}
 					]
