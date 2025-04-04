@@ -1,0 +1,20 @@
+{
+	"name": "pipeline3",
+	"properties": {
+		"activities": [
+			{
+				"name": "If Condition1",
+				"type": "IfCondition",
+				"dependsOn": [],
+				"userProperties": []
+			}
+		],
+		"variables": {
+			"Name": {
+				"type": "String",
+				"defaultValue": "Miru"
+			}
+		},
+		"annotations": []
+	}
+}
