@@ -26,7 +26,26 @@
 							"type": "DelimitedTextReadSettings"
 						}
 					},
-					"enableStaging": false
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
 				},
 				"inputs": [
 					{
@@ -40,7 +59,28 @@
 							"p_directory": {
 								"value": "@pipeline().parameters.input",
 								"type": "Expression"
+							},
+							"p_filename": {
+								"value": "@pipeline().parameters.filename",
+								"type": "Expression"
 							}
+						}
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "april9",
+						"type": "DatasetReference",
+						"parameters": {
+							"p_container": {
+								"value": "@pipeline().parameters.container",
+								"type": "Expression"
+							},
+							"p_directory": {
+								"value": "@pipeline().parameters.filename",
+								"type": "Expression"
+							},
+							"p_filename": "outputapril9.csv"
 						}
 					}
 				]
