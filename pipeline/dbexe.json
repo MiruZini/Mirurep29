@@ -15,7 +15,13 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "/Users/bhazinimirudu@gmail.com/first notebook"
+					"notebookPath": "/Users/bhazinimirudu@gmail.com/first notebook",
+					"baseParameters": {
+						"widget_id": {
+							"value": "@pipeline().parameters.pp_widget_id",
+							"type": "Expression"
+						}
+					}
 				},
 				"linkedServiceName": {
 					"referenceName": "AzureDatabricks1",
@@ -23,6 +29,11 @@
 				}
 			}
 		],
+		"parameters": {
+			"pp_widget_id": {
+				"type": "String"
+			}
+		},
 		"annotations": []
 	}
 }
