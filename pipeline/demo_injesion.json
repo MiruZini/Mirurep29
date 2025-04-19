@@ -65,7 +65,21 @@
 							"typeProperties": {
 								"dataset": {
 									"referenceName": "sql_demo_param",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"pp_container": {
+											"value": "@item().container_name",
+											"type": "Expression"
+										},
+										"pp_folder": {
+											"value": "@item().source_dir",
+											"type": "Expression"
+										},
+										"pp_filename": {
+											"value": "@item().file_name",
+											"type": "Expression"
+										}
+									}
 								},
 								"fieldList": [],
 								"storeSettings": {
