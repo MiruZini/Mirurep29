@@ -225,7 +225,10 @@
 											"scripts": [
 												{
 													"type": "Query",
-													"text": "select * from [dbo].[audit_log]"
+													"text": {
+														"value": "@concat(\n    'INSERT INTO [dbo].[audit_log] VALUES (',\n    item().id, ', ',\n    '''',string('success'), '''', ', ',\n    '''', formatDateTime(utcNow(), 'yyyy-MM-dd HH:mm:ss'), '''',\n    ')'\n)",
+														"type": "Expression"
+													}
 												}
 											],
 											"scriptBlockExecutionTimeout": "02:00:00"
